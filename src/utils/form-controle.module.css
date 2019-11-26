@@ -1,0 +1,15 @@
+.error {
+    border-radius: 4px;
+    height: 32px;
+    border: 2px solid tomato;
+}
+
+.message {
+    font-weight: bold;
+    color: tomato;
+}
+.textAreaError {
+    border-radius: 5px;
+    height: 58px;
+    border: 2px solid tomato;
+}

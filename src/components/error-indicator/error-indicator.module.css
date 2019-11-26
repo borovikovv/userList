@@ -1,0 +1,22 @@
+.errorIndicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    margin-top: 30px;
+    flex-direction: column;
+    color: #c78f22;
+}
+.errorImg {
+    width: 7rem;
+    height: 7rem;
+}
+.span2 {
+}
+
+@media(min-width: 992px) {
+    .errorImg {
+        width: 10rem;
+        height: 10rem;
+    }
+}
