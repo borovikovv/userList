@@ -3,12 +3,17 @@ import { Field, reduxForm } from 'redux-form';
 import s from './form.module.css';
 import {date, maxLength, required} from "../../utils/validators";
 import {Input, Select, Textarea} from "../../utils/form-controls";
+import ErrorIndicator from "../error-indicator/error-indicator";
 
 const maxLength256 = maxLength(256);
 const maxLength1024 = maxLength(1024);
 
 let UserForm = (props) => {
-    const { handleSubmit, user } = props;
+    const { handleSubmit, user, hasError } = props;
+
+    if(hasError) {
+        return <ErrorIndicator />
+    }
     return(
         <form className={s.form} onSubmit={handleSubmit}>
             <div className={s.fieldContainer}>

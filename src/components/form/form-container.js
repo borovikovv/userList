@@ -27,13 +27,13 @@ class FormContainer extends Component {
     };
 
     render() {
-        const { clearUserAC } = this.props;
+        const { clearUserAC, hasError } = this.props;
         return (
             <Fragment>
                 <Link className={s.link} to='/'>
                     <button className={s.usersListBtn} onClick={ clearUserAC }>Users list</button>
                 </Link>
-                <UserForm user={this.props.user} initialValues={this.initialValue} onSubmit={this.submit}/>
+                <UserForm hasError={hasError} user={this.props.user} initialValues={this.initialValue} onSubmit={this.submit}/>
             </Fragment>
         )
     }
@@ -41,6 +41,7 @@ class FormContainer extends Component {
 
 const mapStateToProps = ({users}) => {
     return {
+        hasError: users.hasError,
         user: users.user
     }
 };
